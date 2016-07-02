@@ -1,0 +1,50 @@
+﻿@model Place.Models.KalkulatorModel
+
+@{
+    ViewBag.Title = "Wynik2";
+}
+
+<h2>Wynik2</h2>
+
+<div>
+    <h4>KalkulatorModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pierwszaliczba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pierwszaliczba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.drugaliczba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drugaliczba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typdzialania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typdzialania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.suma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.suma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

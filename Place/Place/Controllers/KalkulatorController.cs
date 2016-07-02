@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Place.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -36,6 +37,34 @@ namespace Place.Controllers
         {
             double suma = a / b;
             return View("Wynik", suma);
+        }
+
+        public ActionResult Oblicz(KalkulatorModel model )
+        {
+
+            if (model.typdzialania == "dodawanie")
+            {
+                model.suma = model.pierwszaliczba + model.drugaliczba;
+            }
+
+            if (model.typdzialania == "odejmowanie")
+            {
+                model.suma = model.pierwszaliczba - model.drugaliczba;
+            }
+
+
+            if (model.typdzialania == "mnozenie")
+            {
+                model.suma = model.pierwszaliczba * model.drugaliczba;
+            }
+
+
+            if (model.typdzialania == "dzielenie")
+            {
+                model.suma = model.pierwszaliczba / model.drugaliczba;
+            }
+
+            return View("Wynik2", model);
         }
 
     }
